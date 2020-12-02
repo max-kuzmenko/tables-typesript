@@ -1,13 +1,10 @@
 import React from 'react';
+import AppLayout from 'components/AppLayout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <button>123</button>
-      </header>
-    </div>
-  );
-}
+import Editor from 'pages/Editor';
+
+const App = () => (
+  <AppLayout header="Header" sidebar="Sidebar" content={<Editor />} />
+);
 
 export default App;

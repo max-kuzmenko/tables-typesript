@@ -1,0 +1,105 @@
+@import "~styles/constants";
+
+
+.TableLayout {
+  width: 100%;
+  height: 100%;
+
+  padding: 1.8rem 3.6rem 3.6rem;
+  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+$namesFontSize: 1.2rem;
+
+.RowNames {
+  height: 100%;
+  padding-right: 1.8rem;
+  font-size: $namesFontSize;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  .WidthOffset {
+    opacity: 0;
+    display: block;
+    padding: 0 0.6rem;
+    height: 0;
+    line-height: 0;
+  }
+
+  .HeightOffset {
+    position: relative;
+    display: inline-block;
+    padding: 1.5rem 0;
+    color: rgba(0,0,0,0);
+  }
+
+  .NavIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    color: $fontColorBase;
+    width: 100%;
+    height: calc(100% - 2rem);
+    background-color: $accentBackground;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+  }
+}
+
+.ColumnNames {
+  padding-bottom: 1.8rem;
+  font-size: $namesFontSize;
+
+  .HeightOffset {
+    opacity: 0;
+    display: inline-block;
+    padding: 0.5rem 0;
+    width: 0;
+  }
+}
+
+.TableSide {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.TableWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.ScrollArea {
+  border: $cellBorder;
+  border-radius: .5rem;
+  box-shadow: 0 0 3.2rem -1.3rem rgba(0,0,0,0.12);
+}
+
+.Grid {
+  overflow: visible !important;
+  &, * {
+    outline: none;
+  }
+}
+
+.Cell {
+  box-sizing: border-box;
+  border-bottom: $tableCellBorder;
+  border-right: $tableCellBorder;
+  padding: .5rem;
+}

@@ -1,0 +1,28 @@
+@import "~styles/constants";
+
+
+.NamesScroll {
+  border: $cellBorder;
+  background-color: $accentBackground;
+  transform: translateY(-.1rem);
+  border-radius: .5rem;
+}
+
+.List {
+  overflow: visible !important;
+  &, & {
+    outline: none;
+  }
+}
+
+.Name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: $fontColorBase;
+
+  &:not(:last-child) {
+    border-bottom: $cellBorder;
+  }
+}
