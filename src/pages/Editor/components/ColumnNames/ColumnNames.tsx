@@ -5,6 +5,7 @@ import Scrollbars from 'components/Scrollbars';
 import RemoveScroll from 'components/RemoveScroll';
 
 import { getRems } from 'utils/css';
+import { letterIndex } from 'utils/letterIndex';
 import { DEFAULT_CELL_WIDTH_REM } from 'constants/dafults';
 
 import styles from './ColumnNames.module.scss';
@@ -16,7 +17,7 @@ type TProps = {
 
 const ColumnNames = ({ scrollLeft, columnsCount }: TProps) => {
   return (
-    <RemoveScroll style={{ height: '100%' }}>
+    <RemoveScroll style={{ width: '100%', height: '100%' }}>
       <AutoSizer>
         {({ width, height }) => (
           <Scrollbars
@@ -50,7 +51,7 @@ const ColumnNames = ({ scrollLeft, columnsCount }: TProps) => {
                     className={styles.Name}
                     style={style}
                   >
-                    {columnIndex + 1}
+                    {letterIndex(columnIndex)}
                   </div>
                 );
               }}
