@@ -28,6 +28,7 @@
   justify-content: center;
   box-sizing: border-box;
   height: 100%;
+  transform: translateY(-.1rem);
   color: $fontColorBase;
 
   &:not(:last-child) {

@@ -10,96 +10,76 @@
   position: relative;
 
   display: flex;
+  flex-direction: column;;
   flex-wrap: nowrap;
 }
 
 $namesFontSize: 1.2rem;
 
-.RowNames {
-  height: 100%;
-  padding-right: 1.8rem;
-  font-size: $namesFontSize;
-
+.TopNavigation {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
+  width: 100%;
+  height: 2.2rem;
+  padding-bottom: 1.8rem;
 
-  .WidthOffset {
-    opacity: 0;
-    display: block;
-    padding: 0 0.6rem;
-    height: 0;
-    line-height: 0;
-  }
-
-  .HeightOffset {
-    position: relative;
+  .NavIconContainer {
     display: inline-block;
-    padding: 1.5rem 0;
-    color: rgba(0,0,0,0);
-  }
+    height: 100%;
 
-  .NavIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
 
     z-index: 1;
     color: $fontColorBase;
-    width: 100%;
-    height: calc(100% - 2rem);
+    border: 0.08rem solid $accentBackground;
     background-color: $accentBackground;
     font-size: 1.5rem;
     border-radius: .5rem;
+
+    .Icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+
+  .ColumnNamesContainer {
+    height: 100%;
+    width: 100%;
+    font-size: $namesFontSize;
   }
 }
 
-.ColumnNames {
-  padding-bottom: 1.8rem;
-  font-size: $namesFontSize;
-
-  .HeightOffset {
-    opacity: 0;
-    display: inline-block;
-    padding: 0.5rem 0;
-    width: 0;
-  }
-}
-
-.TableSide {
-  width: 100%;
-  height: 100%;
-
+.BottomTable {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
-}
 
-.TableWrapper {
   height: 100%;
   width: 100%;
-}
 
-.ScrollArea {
-  border: $cellBorder;
-  border-radius: .5rem;
-  box-shadow: 0 0 3.2rem -1.3rem rgba(0,0,0,0.12);
-}
+  .SideNavigation {
+    border: 0.08rem solid rgba(0,0,0,0);
+    height: 100%;
+    width: auto;
+  }
 
-.Grid {
-  overflow: visible !important;
-  &, * {
-    outline: none;
+  .TableGridContainer {
+    height: 100%;
+    width: 100%;
   }
 }
 
-.Cell {
-  box-sizing: border-box;
-  border-bottom: $tableCellBorder;
-  border-right: $tableCellBorder;
-  padding: .5rem;
+.PaddingBlock {
+  width: 1.8rem;
+  min-width: 1.8rem;
+}
+
+.WidthOffset {
+  opacity: 0;
+  display: block;
+  padding: 0 0.6rem;
+  height: 0;
+  line-height: 0;
+  font-size: $namesFontSize;
 }
